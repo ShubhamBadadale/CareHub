@@ -1,0 +1,159 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family: cursive
+}
+body{
+    background-color:#F0F0F0;
+    color:black;
+}
+
+header nav {
+    background-color:#39539E ;
+    /* color: black; */
+    padding : 15px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+   z-index: 1;
+}
+header nav h1{
+font-size: 40px;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+header nav form {
+    display :flex;
+    justify-content: center;
+}
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 5px;
+    
+}
+form input[type="text"], button [type="submit"]
+{
+    border: none;/*removed the boarder of the search box*/
+    font-size: 15px;/*increased the size of the text inside the search box*/
+    padding: 8px;/*increases the space or volume in the box*/
+    border-radius: 2px;/*this made the block curve at the corner*/
+
+    
+}
+
+now for the search button that is in default , what we have to change*/
+
+ form > button[type="submit"] {
+    background-color:#00B9E6 ;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color  0.2s ease-in-out;/*this helps to slow down the yransition when the curser comes on the button*/
+ }
+
+
+
+ to change the colour of the search button when the cursor moves to on it*/
+ form > button[type="submit"]:hover{/*the space should not be there in between the ]:hover*/
+    background-color: rgb(226, 131, 131);}
+
+   
+
+.recipe-container{
+text-align: center;
+margin-top: 20;
+
+}
+
+/*Responsive code*/
+@media screen and (max-width:600px) {
+    header nav{
+        flex-direction: column;
+
+    }
+
+    header nav form {
+        width: 80%;
+        margin: top 20px;
+    }
+
+    
+}
+
+.container {
+    padding-left: 10px;
+    max-width: 1500px;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    
+    width: 100%;
+    height: 70px;
+    background: #353535;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#d7cfcf, #9198e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover > .img {
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(#9198e5, #712020);
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.textBox {
+    width: calc(100% - 90px);
+    margin-left: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.span {
+    font-size: 10px;
+}
+
+.h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.p {
+    font-size: 12px;
+    font-weight: lighter;
+}
